@@ -7,11 +7,11 @@ i:integer
             write("we cannot calculate dot product")
         ps:NaN ;
         END_IF
-    for (i=0;i<3;i++) step 1 do
+    for (i=0;i<3;i++) 
     begin
     write ("doner lelement",i+1,"de la vecteur v1")
 read (v1[i])
-        for (j=0;j<3;j++) step 1 do
+        for (j=0;j<3;j++)
     write ("doner lelement",j+1,"de la vecteur v1")
 read (v1[j])
  ps+=v1[i]*v2[j]
@@ -26,11 +26,11 @@ i:integer
             write("we cannot calculate dot product")
         ps:NaN ;
         END_IF
-    for (i=0;i<3;i++) step 1 do
+    for (i=0;i<3;i++) 
     begin
     write ("doner lelement",i+1,"de la vecteur v1")
 read (v1[i])
-        for (j=0;j<3;j++) step 1 do
+        for (j=0;j<3;j++) 
     write ("doner lelement",j+1,"de la vecteur v1")
 read (v1[j])
  ps+=v1[i]*v2[j]
