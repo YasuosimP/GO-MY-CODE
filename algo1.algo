@@ -1,0 +1,23 @@
+    program algo1
+    VAR
+        a, b,c,x,i: integer ;
+        sentence : string ;
+    BEGIN
+        repeat {
+         write (please enter your sentecnce here );
+        read (sentence) ;
+        x:=length(sentence);
+        until sentence(x)==".";}
+        for (i=0;i++;i<x) do 
+        {
+            if (sentence(i)==" ")
+            a+=1 ;
+            else 
+            b+=1;
+        }
+    for (i=0;i++;i<x) do {
+ if (sentence(i)=="a" or sentence(i)=="e" sentence(i)=="o" sentence(i)=="u" sentence(i)=="i" sentence(i)=="y")
+ c+=1; 
+ }
+ write ("there is ",a+1,"words and ",b,"caracters and ",c,"voyelles in this sentence");
+    END
