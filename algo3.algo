@@ -1,0 +1,55 @@
+PROCEDURE dot_product ( v1,v2:tab; var ps:integer)
+    var
+i:integer
+
+        begin
+        IF (v1.length<>v2.length) THEN
+            write("we cannot calculate dot product")
+        ps:NaN ;
+        END_IF
+    for (i=0;i<3;i++) step 1 do
+    begin
+    write ("doner lelement",i+1,"de la vecteur v1")
+read (v1[i])
+        for (j=0;j<3;j++) step 1 do
+    write ("doner lelement",j+1,"de la vecteur v1")
+read (v1[j])
+ ps+=v1[i]*v2[j]
+        end
+    end 
+    FUNCTION dot_product ( v1,v2:tab) : integer
+    var
+i:integer
+
+        begin
+        IF (v1.length<>v2.length) THEN
+            write("we cannot calculate dot product")
+        ps:NaN ;
+        END_IF
+    for (i=0;i<3;i++) step 1 do
+    begin
+    write ("doner lelement",i+1,"de la vecteur v1")
+read (v1[i])
+        for (j=0;j<3;j++) step 1 do
+    write ("doner lelement",j+1,"de la vecteur v1")
+read (v1[j])
+ ps+=v1[i]*v2[j]
+        end
+        return ps 
+    end 
+    ALGORITHM calculate_dot_product
+    type 
+    tab: array of integer [50]
+    var 
+v1,v2: tab
+ps,psf :integer 
+    begin
+    ps:=0
+     dot_product(v1,v2,ps)
+     psf:= dot_product(v1,v2);
+    write ("le produit scalaire de ",v1,"et",v2,"est",ps)
+    if (ps=0)
+    write("v1 and v2 are ortho")
+    else 
+    write("not ortho")
+    end
