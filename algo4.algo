@@ -1,0 +1,25 @@
+PROCEDURE swap(var a , b :integer)
+var 
+aux:integer
+    begin
+a:=aux
+a:=b
+b:=aux
+    end
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+END
+PROCEDURE insertion (var arr:array of integer )
+VAR
+i,min-index,j,aux:integer
+BEGIN
+    for (i=0;i<arr.length-1;i++) do 
+    min.index=i
+    for (j=0;j<arr.length-1;j++) do 
+    if (arr[j]<arr[min-index]) THEN
+    min-index:=j
+    swap(arr[min-index],arr[j])
+    
+END
