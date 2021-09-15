@@ -1,0 +1,50 @@
+: SOLUTION 1
+Algo: sum of elements
+VAR : 
+   tab1 : ARRAY_OF INTEGER [4]:={3,1,7,9};
+   tab2 : ARRAY_OF INTEGER [4]:= {2,4,1,9,3};
+   tab  : ARRAY_OF INTEGER [8] := tab1.concat(tab2);
+   sum_d:integer :=0;
+   sum_c:integer :=0;
+   exist : boolean :=false;
+begin
+ read (tab);
+ for ( i from 0 to tab.length-1 step 1 ) do
+  exist:= false;   
+  for ( j from 0 to tab.length-1 step 1 ) do
+     if (i<> j and tab[i]== tab[j]) then
+        sum_c := sum_c +tab[i];
+        exist:= true;
+     end if
+   end for
+    if (exist==false) then
+       sum_d=sum_d+tab[i];
+    end if
+  end for  
+end
+
+// // problem1+problem2 : SOLUTION 2
+Algo: sum of elements
+VAR : 
+   tab1 : ARRAY_OF INTEGER [4]:={3,1,7,9};
+   tab2 : ARRAY_OF INTEGER [4]:= {2,4,1,9,3};
+   tab  : ARRAY_OF INTEGER [8]:= tab1.concat(tab2);
+   sum_d:integer :=0;
+   sum_c:integer :=0;
+   htab : HASH_TABLE<INTEGER,INREGER>;
+begin
+read(tab);
+for ( i from 0 to tab.length-1 step 1 ) do
+  if (htab.lookup(tab[i]=false)) then
+    htab.insert(tab[i],1);
+    else if (htab.lookup(tab[i]=true)) then
+      htab.insert (tab[i], htab.get(tab[i])+1);
+      end if
+   end if
+   if (htab.get(tab[i])> 1) then
+     sum_c := sum_c+(tab[i]*htab.get(tab[i]));
+     else
+     sum_d := sum_d+tab[i];
+    end if
+end for
+end
